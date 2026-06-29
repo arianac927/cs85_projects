@@ -17,8 +17,8 @@
         <h1>Order Summary</h1>
         <?php
             // --- Configuration: Change these values to test all business rules! ---
-            $size = 'XL', 'L'; // Options: 'S', 'M', 'L', 'XL'
-            $color = 'Sunset Orange', 'Ocean Blue'; // Any string, but test with 'Sunset Orange' or 'Ocean Blue'
+            $size = 'XL'; 'L'; // Options: 'S', 'M', 'L', 'XL'
+            $color = 'Sunset Orange'; 'Ocean Blue'; // Any string, but test with 'Sunset Orange' or 'Ocean Blue'
             $isCustomized = true; // Options: true, false
             $customerFirstName = 'Ariana'; // <-- IMPORTANT: REPLACE WITH YOUR ACTUAL FIRST NAME
 
@@ -33,17 +33,21 @@
             //     $details .= "<li>Size (L) Upcharge: <span>+$1.75</span></li>";
             // }
 
-            if ($size == L) {
+            if ($size == 'L') {
                 $finalPrice = $finalPrice + 1.75;
                 $details .= "<li>Size (L) Upcharge: <span>+$1.75</span></li>";
             }
-            if ($size == XL) {
+            if ($size == 'XL') {
                 $finalPrice = $finalPrice + 2.50;
                 $details .= "<li>Size (XL) Upcharge: <span>+$2.50</span></li>";
             }
             if ($color == 'Sunset Orange' || 'Ocean Blue') {
                 $finalPrice = $finalPrice + 2.00;
-                $details .= "<li>Color (Sunset Orange OR Ocean Blue) Upcharge: <span>+2.00</span></li>";
+                $details .= "<li>Color (Sunset Orange OR Ocean Blue) Upcharge: <span>+$2.00</span></li>";
+            }
+            if ($isCustomized == true) {
+                $finalPrice = $finalPrice + 5.00;
+                $details .= "<li>Custom Text Upcharge: <span>+$5.00</span></li>";
             }
 
 
