@@ -60,6 +60,15 @@
             echo "<ul>" . $details . "</ul>";
             echo "<ul><li><span class='total'>Final Price:</span> <span class='total'>$" . number_format($finalPrice, 2) . "</span></li></ul>";
 
+/*
+MY DEBUGGING LOG:
+Problem: After initially editing the original 'price_engine', I misread the instructions for the if-statement conditions
+and thought I could use the &&/|| operators as well and didn't really notice much of a difference after utilizing else if/else
+statements in the refactored 'price_engine'.
+Solution: I had to reread the instructions like 5 times and finally realized I was only able to use if-statements. After
+making the necessary corrections, I then noticed the refactored version was shorter and cleaner.
+*/
+
         ?>
     </div>
 </body>
