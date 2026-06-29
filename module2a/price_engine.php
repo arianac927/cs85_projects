@@ -48,10 +48,10 @@
             if ($isCustomized == true) {
                 $finalPrice = $finalPrice + 5.00;
                 $details .= "<li>Custom Text Upcharge: <span>+$5.00</span></li>";
-            }
-            if ($isCustomized == true && $size == 'XL') {
+                if ($size == 'XL') {
                 $finalPrice = $finalPrice + 5.00 + 3.00;
                 $details .= "<li>Custom Text Upcharge + Handling Fee: <span>+$5.00 + $3.00</span></li>";
+                }
             }
 
 
