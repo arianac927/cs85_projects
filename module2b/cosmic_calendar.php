@@ -20,14 +20,6 @@
         <h1>Cosmic Calendar</h1>
         <div class="calendar-grid">
             <?php
-                // --- YOUR ENTIRE PHP SCRIPT GOES HERE ---
-            ?>
-        </div>
-    </div>
-</body>
-</html>
-
-<?php
     // Set up my name
     $myName = 'Ariana';
     echo strlen($myName);
@@ -46,14 +38,25 @@
 
     for ($i = strlen($myName); $i < $dayOfYear; $i++) {
         $cssClass = 'day-box';
-        if ($myName > 0 && $month > 0 && $dayOfYear % $myName === 0 && $dayOfYear % $month === 0) {
+        if (strlen($myName) > 0 && $month > 0 && $dayOfYear / strlen($myName) === 0 && $dayOfYear / $month === 0) {
             $cssClass .= 'cosmic-both';
-        } else if ($myName > 0 && $dayOfYear % $myName === 0) {
+        } else if (strlen($myName) > 0 && $dayOfYear / strlen($myName) === 0) {
             $cssClass .= 'cosmic-name';
-        } else if ($month > 0 && $dayOfYear % $month === 0) {
+        } else if ($month > 0 && $dayOfYear / $month === 0) {
             $cssClass .= 'cosmic-month';
         }
-        echo "<div class='$cssClass'>$i</div>\n";
+        echo "<div class='$cssClass'>$i</div>";
     }
 
-echo "Today is day number: " . $dayOfYear; echo "<br>"; echo "The current month is: " . $month; ?> 
+echo "Today is day number: " . $dayOfYear; echo "<br>"; echo "The current month is: " . $month; 
+
+/*
+MY DEBUGGING LOG:
+Problem: After creating my for loop, I kept getting an error on the equations
+that were supposed to create the calendar box
+*/
+            ?>
+        </div>
+    </div>
+</body>
+</html>
