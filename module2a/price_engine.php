@@ -37,20 +37,28 @@
                 $finalPrice = $finalPrice + 1.75;
                 $details .= "<li>Size (L) Upcharge: <span>+$1.75</span></li>";
             }
+
             if ($size == 'XL') {
                 $finalPrice = $finalPrice + 2.50;
                 $details .= "<li>Size (XL) Upcharge: <span>+$2.50</span></li>";
             }
-            if ($color == 'Sunset Orange' || 'Ocean Blue') {
+
+            if ($color == 'Sunset Orange') {
                 $finalPrice = $finalPrice + 2.00;
-                $details .= "<li>Color (Sunset Orange OR Ocean Blue) Upcharge: <span>+$2.00</span></li>";
+                $details .= "<li>Color (Sunset Orange) Upcharge: <span>+$2.00</span></li>";
             }
+
+            if ($color == 'Ocean Blue') {
+                $finalPrice = $finalPrice + 2.00;
+                $details .= "<li>Color (Ocean Blue) Upcharge: <span>+$2.00</span></li>";
+            }
+
             if ($isCustomized == true) {
                 $finalPrice = $finalPrice + 5.00;
                 $details .= "<li>Custom Text Upcharge: <span>+$5.00</span></li>";
                 if ($size == 'XL') {
                 $finalPrice = $finalPrice + 5.00 + 3.00;
-                $details .= "<li>Custom Text Upcharge + Handling Fee: <span>+$5.00 + $3.00</span></li>";
+                $details .= "<li>Handling Fee: <span>+$3.00</span></li>";
                 }
             }
 
