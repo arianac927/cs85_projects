@@ -53,7 +53,12 @@ echo "Today is day number: " . $dayOfYear; echo "<br>"; echo "The current month 
 /*
 MY DEBUGGING LOG:
 Problem: After creating my for loop, I kept getting an error on the equations
-that were supposed to create the calendar box
+that were supposed to create the calendar box. I thought it didn't recognize
+the operands for whatever reason and was very confused. I then realized I was
+seeing an error because I only inputted $myName and the console obviously
+didn't recognize this as an integer like the $month and $dayOfYear variables.
+Solution: I made sure to input $myName as strlen($myName), so the console
+could recognize it as an integer in order to complete the equations.
 */
             ?>
         </div>
